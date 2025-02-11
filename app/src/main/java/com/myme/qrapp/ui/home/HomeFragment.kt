@@ -134,7 +134,7 @@ class HomeFragment : Fragment() {
                         for (barcode in barcodes) {
                             barcode.rawValue?.let { qrCodeValue ->
                                 Log.d("CameraFragment", "QR 코드 인식 성공: $qrCodeValue")
-                                // QR 코드 인식 후 다이얼로그 띄우기
+                                //TODO:  QR 코드 인식 후 다이얼로그 띄우기 (여기 부분 수정 하면 됨)
                                 if (parentFragmentManager.findFragmentByTag("QrCodeDialog") == null) {
                                     QrCodeDialogFragment(qrCodeValue).show(parentFragmentManager, "QrCodeDialog")
                                 }
